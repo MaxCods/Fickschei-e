@@ -10,7 +10,7 @@ import org.eclipse.jetty.server.Server;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        Server server= new Server(8082);
+        Server server= new Server(8084);
         ServletContextHandler context= new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
         server.setHandler(context);
@@ -19,6 +19,7 @@ public class Main {
 
         server.start();
         BookInMemoryStorage.getInstance().populateDatabase();
+        BookInMemoryStorage.getInstance().printAll();
         server.join();
     }
 }

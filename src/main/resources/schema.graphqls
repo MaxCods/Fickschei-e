@@ -9,7 +9,7 @@ type Book{
     author: Author!
     id: Int!
 }
-type BookInput{
+input BookInput{
     lastNameAuthor: String!
     firstNameAuthor: String!
     titel: String!
@@ -19,7 +19,7 @@ type BookInput{
 }
 
  type Query{
-    bookById(Id:Int!) : Book
+    bookById(id:Int!) : Book
 
 
 }

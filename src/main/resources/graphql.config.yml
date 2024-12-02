@@ -1,9 +1,9 @@
-schema: schema.graphql
-extensions:
-  endpoints:
-    Default GraphQL Endpoint:
-      url: http://localhost:8082/lib
-      headers:
-        user-agend: JS GraphQL
-        introspect: false
-
+#schema: schema.graphql
+#extensions:
+#  endpoints:
+#    Default GraphQL Endpoint:
+#      url: http://localhost:8082/demo/lib
+#      headers:
+#        user-agend: JS GraphQL
+#        introspect: false
+#

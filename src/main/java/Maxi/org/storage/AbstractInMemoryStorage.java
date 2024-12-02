@@ -1,7 +1,7 @@
 package Maxi.org.storage;
 
 import Maxi.org.models.AbstractModel;
-
+import Maxi.org.models.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Predicate;

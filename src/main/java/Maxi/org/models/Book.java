@@ -37,4 +37,14 @@ public class Book extends AbstractModel {
     public void setPublishedYear(int publishedYear) {
         this.publishedYear = publishedYear;
     }
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author=" + author +
+                ", titel='" + titel + '\'' +
+                ", iSBN='" + iSBN + '\'' +
+                ", publishedYear=" + publishedYear +
+                '}';
+    }
+
 }
