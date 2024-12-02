@@ -1,0 +1,31 @@
+type Author{
+    lastName: String!
+    firstName: String!
+}
+type Book{
+    titel: String!
+    ISBN: String!
+    publishedYear: Int
+    author: Author!
+    id: Int!
+}
+type BookInput{
+    lastNameAuthor: String!
+    firstNameAuthor: String!
+    titel: String!
+    ISBN : String!
+    publishedYear: Int
+    id: Int!
+}
+
+ type Query{
+    bookById(Id:Int!) : Book
+
+
+}
+
+ type Mutation{
+     update(Input: BookInput!) : Book
+     delete(ISBN: String!):Boolean
+     create(Input: BookInput!) :Book
+ }
