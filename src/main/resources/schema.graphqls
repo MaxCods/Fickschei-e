@@ -4,7 +4,7 @@ type Author{
 }
 type Book{
     titel: String!
-    ISBN: String!
+    iSBN: String!
     publishedYear: Int
     author: Author!
     id: Int!
@@ -13,19 +13,18 @@ input BookInput{
     lastNameAuthor: String!
     firstNameAuthor: String!
     titel: String!
-    ISBN : String!
+    iSBN : String!
     publishedYear: Int
-    id: Int!
+    id: Int
 }
 
  type Query{
-    bookById(id:Int!) : Book
-
-
+     bookById(id:Int!) : Book
+     books: [Book!]!
 }
 
  type Mutation{
      update(Input: BookInput!) : Book
-     delete(ISBN: String!):Boolean
-     create(Input: BookInput!) :Book
+     delete(id: Int!):Boolean
+     create(Input: BookInput!): Book
  }

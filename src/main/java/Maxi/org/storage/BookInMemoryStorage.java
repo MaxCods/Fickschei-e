@@ -28,7 +28,7 @@ public class BookInMemoryStorage extends AbstractInMemoryStorage {
             book.setAuthor(a);
             book.setISBN(faker.code().isbn10());
             book.setPublishedYear(faker.number().numberBetween(1900,2021));
-            if(!ISBNExists(book.getiSBN()))
+            if(!ISBNExists(book.getISBN()))
             {
                 getInstance().create(book);
             }
@@ -43,7 +43,7 @@ public class BookInMemoryStorage extends AbstractInMemoryStorage {
     public boolean ISBNExists(String ISBN){
         Set<Long> keys = getInstance().storage.keySet();
         for (Long key : keys) {
-            if( ((Book) getInstance().storage.get(key)).getiSBN().equals(ISBN))
+            if( ((Book) getInstance().storage.get(key)).getISBN().equals(ISBN))
                 return true;
         }
         return false;

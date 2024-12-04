@@ -22,7 +22,7 @@ public class Book extends AbstractModel {
         this.author = author;
     }
 
-    public String getiSBN() {
+    public String getISBN() {
         return iSBN;
     }
 

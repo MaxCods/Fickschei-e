@@ -4,15 +4,13 @@ import Maxi.org.models.Book;
 import Maxi.org.storage.BookInMemoryStorage;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 
+import java.util.List;
+
 public class BookQueryResolver implements GraphQLQueryResolver {
 
-//    public Book BookById(int Id){
-//        System.out.println("BookById: " + Id);
-//       return (Book) BookInMemoryStorage.getInstance().readById(Id).get();
-//    }
+
 public Book bookById(Long Id){
-    System.out.println("BookById: " + Id);
-    System.out.println("test");
+
     try{
     return (Book) BookInMemoryStorage.getInstance()
             .readById(Id)
@@ -22,5 +20,8 @@ public Book bookById(Long Id){
     }
     System.out.println("null");
     return null;
+}
+public List<Book> books(){
+    return BookInMemoryStorage.getInstance().readByPredicate(p -> true);
 }
 }
